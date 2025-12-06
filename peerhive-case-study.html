@@ -24,6 +24,148 @@ body { font-family: Inter, sans-serif; }
   margin: 2rem 0;
   width: 100%;
 }
+
+/* Slide container styles */
+.slide-container {
+  position: relative;
+  background: #f5f5f5;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.slide-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  animation: fadeIn 0.3s;
+}
+
+.slide.active {
+  display: block !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: #f0f0f0;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow.prev {
+  left: -25px;
+}
+
+.arrow.next {
+  right: -25px;
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d0d0d0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #6B7FED;
+  width: 12px;
+  height: 12px;
+}
+
+.devpost-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.devpost-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.devpost-button:hover {
+  background: #333;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .arrow.prev {
+    left: -15px;
+  }
+  
+  .arrow.next {
+    right: -15px;
+  }
+}
 </style>
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
@@ -84,62 +226,62 @@ WebFont.load({
 <div class="div-block-65"></div>
 
 <!-- Slide Deck Container -->
-<div style="position: relative; background: #f5f5f5; border-radius: 20px; padding: 40px; margin: 40px 0; display: flex; align-items: center; justify-content: center; min-height: 500px;">
-<button style="position: absolute; top: 50%; left: -25px; transform: translateY(-50%); background: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #333; box-shadow: 0 2px 10px rgba(0,0,0,0.15); transition: all 0.3s ease; z-index: 10;" onclick="changeSlide(-1)" onmouseover="this.style.background='#f0f0f0'; this.style.transform='translateY(-50%) scale(1.1)';" onmouseout="this.style.background='white'; this.style.transform='translateY(-50%) scale(1)';">‹</button>
+<div class="slide-container">
+<button class="arrow prev" onclick="changeSlide(-1)">‹</button>
+  
+<div class="slide-wrapper">
+<div class="slide active">
+<img src="assets/peerhive/1.jpg" alt="PeerHive Slide 1">
+</div>
+<div class="slide">
+<img src="assets/peerhive/2.jpg" alt="PeerHive Slide 2">
+</div>
+<div class="slide">
+<img src="assets/peerhive/3.jpg" alt="PeerHive Slide 3">
+</div>
+<div class="slide">
+<img src="assets/peerhive/4.jpg" alt="PeerHive Slide 4">
+</div>
+<div class="slide">
+<img src="assets/peerhive/5.jpg" alt="PeerHive Slide 5">
+</div>
+<div class="slide">
+<img src="assets/peerhive/6.jpg" alt="PeerHive Slide 6">
+</div>
+<div class="slide">
+<img src="assets/peerhive/7.jpg" alt="PeerHive Slide 7">
+</div>
+<div class="slide">
+<img src="assets/peerhive/8.jpg" alt="PeerHive Slide 8">
+</div>
+<div class="slide">
+<img src="assets/peerhive/9.jpg" alt="PeerHive Slide 9">
+</div>
+<div class="slide">
+<img src="assets/peerhive/10.jpg" alt="PeerHive Slide 10">
+</div>
+</div>
 
-<div style="position: relative; width: 100%; max-width: 900px;">
-<div class="slide" style="display: block;">
-<img src="assets/peerhive/1.jpg" alt="PeerHive Slide 1" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-<div class="slide" style="display: none;">
-<img src="assets/peerhive/2.jpg" alt="PeerHive Slide 2" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-<div class="slide" style="display: none;">
-<img src="assets/peerhive/3.jpg" alt="PeerHive Slide 3" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-<div class="slide" style="display: none;">
-<img src="assets/peerhive/4.jpg" alt="PeerHive Slide 4" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-<div class="slide" style="display: none;">
-<img src="assets/peerhive/5.jpg" alt="PeerHive Slide 5" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-<div class="slide" style="display: none;">
-<img src="assets/peerhive/6.jpg" alt="PeerHive Slide 6" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-<div class="slide" style="display: none;">
-<img src="assets/peerhive/7.jpg" alt="PeerHive Slide 7" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-<div class="slide" style="display: none;">
-<img src="assets/peerhive/8.jpg" alt="PeerHive Slide 8" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-<div class="slide" style="display: none;">
-<img src="assets/peerhive/9.jpg" alt="PeerHive Slide 9" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-<div class="slide" style="display: none;">
-<img src="assets/peerhive/10.jpg" alt="PeerHive Slide 10" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-</div>
-</div>
-
-<button style="position: absolute; top: 50%; right: -25px; transform: translateY(-50%); background: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #333; box-shadow: 0 2px 10px rgba(0,0,0,0.15); transition: all 0.3s ease; z-index: 10;" onclick="changeSlide(1)" onmouseover="this.style.background='#f0f0f0'; this.style.transform='translateY(-50%) scale(1.1)';" onmouseout="this.style.background='white'; this.style.transform='translateY(-50%) scale(1)';">›</button>
+<button class="arrow next" onclick="changeSlide(1)">›</button>
 </div>
 
 <!-- Slide Indicators -->
-<div style="display: flex; justify-content: center; gap: 8px; margin-top: 20px;">
-<span class="indicator" onclick="goToSlide(0)" style="width: 12px; height: 12px; border-radius: 50%; background: #6B7FED; cursor: pointer; transition: all 0.3s ease;"></span>
-<span class="indicator" onclick="goToSlide(1)" style="width: 10px; height: 10px; border-radius: 50%; background: #d0d0d0; cursor: pointer; transition: all 0.3s ease;"></span>
-<span class="indicator" onclick="goToSlide(2)" style="width: 10px; height: 10px; border-radius: 50%; background: #d0d0d0; cursor: pointer; transition: all 0.3s ease;"></span>
-<span class="indicator" onclick="goToSlide(3)" style="width: 10px; height: 10px; border-radius: 50%; background: #d0d0d0; cursor: pointer; transition: all 0.3s ease;"></span>
-<span class="indicator" onclick="goToSlide(4)" style="width: 10px; height: 10px; border-radius: 50%; background: #d0d0d0; cursor: pointer; transition: all 0.3s ease;"></span>
-<span class="indicator" onclick="goToSlide(5)" style="width: 10px; height: 10px; border-radius: 50%; background: #d0d0d0; cursor: pointer; transition: all 0.3s ease;"></span>
-<span class="indicator" onclick="goToSlide(6)" style="width: 10px; height: 10px; border-radius: 50%; background: #d0d0d0; cursor: pointer; transition: all 0.3s ease;"></span>
-<span class="indicator" onclick="goToSlide(7)" style="width: 10px; height: 10px; border-radius: 50%; background: #d0d0d0; cursor: pointer; transition: all 0.3s ease;"></span>
-<span class="indicator" onclick="goToSlide(8)" style="width: 10px; height: 10px; border-radius: 50%; background: #d0d0d0; cursor: pointer; transition: all 0.3s ease;"></span>
-<span class="indicator" onclick="goToSlide(9)" style="width: 10px; height: 10px; border-radius: 50%; background: #d0d0d0; cursor: pointer; transition: all 0.3s ease;"></span>
+<div class="slide-indicators">
+<span class="indicator active" onclick="goToSlide(0)"></span>
+<span class="indicator" onclick="goToSlide(1)"></span>
+<span class="indicator" onclick="goToSlide(2)"></span>
+<span class="indicator" onclick="goToSlide(3)"></span>
+<span class="indicator" onclick="goToSlide(4)"></span>
+<span class="indicator" onclick="goToSlide(5)"></span>
+<span class="indicator" onclick="goToSlide(6)"></span>
+<span class="indicator" onclick="goToSlide(7)"></span>
+<span class="indicator" onclick="goToSlide(8)"></span>
+<span class="indicator" onclick="goToSlide(9)"></span>
 </div>
 
 <!-- Devpost Button -->
-<div style="display: flex; justify-content: center; margin: 50px 0;">
-<a href="https://devpost.com/software/peerhive-8aq40x" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; background: white; border: 2px solid #333; border-radius: 50px; font-size: 16px; font-weight: 600; color: #333; text-decoration: none; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.background='#333'; this.style.color='white'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';" onmouseout="this.style.background='white'; this.style.color='#333'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+<div class="devpost-button-container">
+<a href="https://devpost.com/software/peerhive-8aq40x" target="_blank" class="devpost-button">
 <span style="font-size: 20px;">Ⓓ</span>
 DEVPOST LINK ↗
 </a>
@@ -175,37 +317,36 @@ const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.indicator');
 
 function showSlide(n) {
+  // Handle wraparound
   if (n >= slides.length) {
     currentSlide = 0;
-  }
-  if (n < 0) {
+  } else if (n < 0) {
     currentSlide = slides.length - 1;
+  } else {
+    currentSlide = n;
   }
   
-  slides.forEach(slide => slide.style.display = 'none');
-  indicators.forEach((indicator, index) => {
-    if (index === currentSlide) {
-      indicator.style.background = '#6B7FED';
-      indicator.style.width = '12px';
-      indicator.style.height = '12px';
-    } else {
-      indicator.style.background = '#d0d0d0';
-      indicator.style.width = '10px';
-      indicator.style.height = '10px';
-    }
+  // Remove active class from all slides
+  slides.forEach(slide => {
+    slide.classList.remove('active');
   });
   
-  slides[currentSlide].style.display = 'block';
+  // Remove active class from all indicators
+  indicators.forEach(indicator => {
+    indicator.classList.remove('active');
+  });
+  
+  // Add active class to current slide and indicator
+  slides[currentSlide].classList.add('active');
+  indicators[currentSlide].classList.add('active');
 }
 
 function changeSlide(n) {
-  currentSlide += n;
-  showSlide(currentSlide);
+  showSlide(currentSlide + n);
 }
 
 function goToSlide(n) {
-  currentSlide = n;
-  showSlide(currentSlide);
+  showSlide(n);
 }
 
 // Keyboard navigation
