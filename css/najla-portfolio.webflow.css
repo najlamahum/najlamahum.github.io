@@ -2228,7 +2228,9 @@ textarea.w-input, textarea.w-select {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
-  padding-top: 15px;
+  margin-top: -12px;
+  margin-bottom: 40px;
+  padding-top: 0;
   padding-bottom: 0;
   display: block;
 }
@@ -2751,7 +2753,7 @@ textarea.w-input, textarea.w-select {
 
 .div-block-29 {
   box-sizing: border-box;
-  object-fit: cover;
+  object-fit: fill;
   background-color: #f7f7f7;
   border-radius: 16px;
   width: 100%;
@@ -2774,6 +2776,14 @@ textarea.w-input, textarea.w-select {
   max-width: 90%;
   padding: 20px;
   overflow: hidden;
+}
+
+.image-5.peerhive {
+  object-fit: cover;
+  width: auto;
+  height: auto;
+  margin-top: -20px;
+  padding: 0;
 }
 
 .div-block-31 {
@@ -3262,6 +3272,7 @@ textarea.w-input, textarea.w-select {
   width: 38rem;
   min-width: auto;
   padding-top: 10px;
+  padding-right: 44px;
   font-family: Lato, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -3527,6 +3538,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .section-2 {
+  box-sizing: border-box;
   margin-bottom: 52px;
 }
 
@@ -3535,6 +3547,143 @@ textarea.w-input, textarea.w-select {
   width: auto;
   height: 1px;
   margin-bottom: 20px;
+}
+
+.div-block-66 {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.mask {
+  border-radius: 0;
+  width: 800px;
+  height: 550px;
+  overflow: hidden;
+}
+
+.image-20 {
+  object-fit: contain;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+}
+
+.left-arrow {
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  display: block;
+  top: 50px;
+}
+
+.div-block-67 {
+  max-width: 1200px;
+}
+
+.slider {
+  background-color: #fff;
+  border-radius: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  overflow: visible;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50px;
+}
+
+.icon {
+  color: #333;
+  -webkit-text-stroke-color: #ad1919;
+  margin-left: 40px;
+  bottom: 20%;
+}
+
+.icon-2 {
+  color: #333;
+  margin-right: 40px;
+  bottom: 20%;
+}
+
+.div-block-68 {
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.button-2 {
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 400px;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  max-width: none;
+  height: 60px;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+}
+
+.slide {
+  object-fit: cover;
+  height: 100%;
+}
+
+.div-block-69 {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.slide-nav {
+  margin-bottom: 5%;
+}
+
+.play-hero {
+  background-image: linear-gradient(#c16bc7, #57c785 52%, #eddd53);
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.div-block-70 {
+  z-index: 2;
+  text-align: center;
+  max-width: 600px;
+  position: relative;
+}
+
+.div-block-71 {
+  z-index: 1;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #eddd5366, #57c78566 40%, #c16bc7 101%);
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 991px) {
@@ -3607,18 +3756,6 @@ textarea.w-input, textarea.w-select {
   }
 }
 
-#w-node-_6622a489-a654-9cfc-8356-33a0978ebf4f-700be8a2, #w-node-_5da9cf89-a890-1bfb-81ee-94ea5bd85d4a-700be8a2, #w-node-_8f2fb8f2-1c1a-a560-821f-42d2f3032c10-20bbc104, #w-node-_8f2fb8f2-1c1a-a560-821f-42d2f3032c13-20bbc104 {
+#w-node-_6622a489-a654-9cfc-8356-33a0978ebf4f-700be8a2, #w-node-_5da9cf89-a890-1bfb-81ee-94ea5bd85d4a-700be8a2, #w-node-_51a0263e-b723-86ef-a98c-732fff4f8b21-20bbc104, #w-node-_8f2fb8f2-1c1a-a560-821f-42d2f3032c10-20bbc104, #w-node-_8f2fb8f2-1c1a-a560-821f-42d2f3032c13-20bbc104, #w-node-f2c02d36-2e6d-eb1b-d5d5-1f4c13cb98ae-a63e4dc0, #w-node-f2c02d36-2e6d-eb1b-d5d5-1f4c13cb98b1-a63e4dc0 {
   grid-area: span 1 / span 1 / span 1 / span 1;
-}
-
-.image-5 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    display: block;
-}
-
-.div-block-29 {
-    overflow: hidden;
 }
