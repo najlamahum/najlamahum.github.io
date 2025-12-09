@@ -3759,3 +3759,40 @@ textarea.w-input, textarea.w-select {
 #w-node-_6622a489-a654-9cfc-8356-33a0978ebf4f-700be8a2, #w-node-_5da9cf89-a890-1bfb-81ee-94ea5bd85d4a-700be8a2, #w-node-_51a0263e-b723-86ef-a98c-732fff4f8b21-20bbc104, #w-node-_8f2fb8f2-1c1a-a560-821f-42d2f3032c10-20bbc104, #w-node-_8f2fb8f2-1c1a-a560-821f-42d2f3032c13-20bbc104, #w-node-f2c02d36-2e6d-eb1b-d5d5-1f4c13cb98ae-a63e4dc0, #w-node-f2c02d36-2e6d-eb1b-d5d5-1f4c13cb98b1-a63e4dc0 {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
+
+/* Add this code to the VERY END of your styles1.css file */
+/* This will make both project cards equal height */
+
+.div-block-27 {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+.div-block-28,
+.div-block-31 {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+  min-width: 300px !important;
+}
+
+.div-block-29 {
+  display: block !important;
+  width: 100% !important;
+  flex-shrink: 0 !important;
+}
+
+.image-5 {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;
+}
+
+.div-block-30,
+.div-block-33 {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
