@@ -3807,3 +3807,504 @@ textarea.w-input, textarea.w-select {
   margin-bottom: 0 !important;
   padding-bottom: 20px !important;
 }
+
+/* ============================================
+   MENTAL HEALTH CASE STUDY - ALIGNMENT FIXES
+   ============================================ */
+
+/* Layout Tokens - CSS Variables */
+:root {
+  --page-max-width: 1100px;
+  --page-padding-x: 24px;
+  --section-gap-desktop: 64px;
+  --section-gap-mobile: 40px;
+  --stack-gap-sm: 16px;
+  --stack-gap-md: 24px;
+  --stack-gap-lg: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --page-padding-x: 20px;
+  }
+}
+
+/* Debug CSS - Uncomment to visualize alignment */
+/*
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .w-layout-blockcontainer.container::before,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .w-layout-blockcontainer.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 0, 0, 0.3);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .w-layout-blockcontainer.container::before {
+  left: var(--page-padding-x);
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .w-layout-blockcontainer.container::after {
+  right: var(--page-padding-x);
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .w-layout-blockcontainer.container {
+  outline: 2px dashed rgba(0, 0, 255, 0.3);
+  position: relative;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] section {
+  outline: 2px dashed rgba(0, 255, 0, 0.3);
+  margin: 2px 0;
+}
+*/
+
+/* Standardized Page Container - Apply to all sections */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .w-layout-blockcontainer.container,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .w-container {
+  max-width: var(--page-max-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--page-padding-x) !important;
+  padding-right: var(--page-padding-x) !important;
+}
+
+/* Fix section spacing */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] section {
+  margin-bottom: var(--section-gap-desktop) !important;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] section:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] section {
+    margin-bottom: var(--section-gap-mobile) !important;
+  }
+}
+
+/* Fix hero image container - full bleed but consistent */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-54 {
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix main content sections - ensure consistent alignment */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-6 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix grid-3 alignment */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .grid-3 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix div-block-5 (project metadata grid) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-5 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix title and subtitle alignment */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .title,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .sub_title_grey {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix overview section */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-58 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix research section */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-4 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix market research section */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-60 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix market research image container */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-56 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix div-block-55 (market research image wrapper) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-55 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Fix image-15 (market research image) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-15 {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Fix user interviews section */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-59 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix image-16 (affinity map) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-16 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Fix key findings section (div-block-11) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-11 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix insights and needs section (div-block-15) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-15 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: var(--stack-gap-lg) !important;
+}
+
+/* Fix div-block-48 and div-block-49 (insights/needs columns) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-48,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-49 {
+  width: auto !important;
+  flex: 1 1 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix user persona section */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-21 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix container-2 (user persona container) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .container-2 {
+  max-width: var(--page-max-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--page-padding-x) !important;
+  padding-right: var(--page-padding-x) !important;
+}
+
+/* Fix div-block-16 and div-block-17 (persona cards) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-16,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-17 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: var(--page-padding-x) !important;
+  padding-right: var(--page-padding-x) !important;
+}
+
+/* Fix problem statement section (div-block-23) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-23 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: var(--page-padding-x) !important;
+  padding-right: var(--page-padding-x) !important;
+}
+
+/* Fix problem statement text blocks */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-23 .text-block-39,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-23 .text-block-40,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-23 .text-block-41 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix prototype & insights section */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-61 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix lo-fi wireframes image */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-35 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-7 {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Fix concept testing images (div-block-57) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-57 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-17,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-18,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-19 {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Fix container-4 (usability testing images) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .container-4 {
+  max-width: var(--page-max-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--page-padding-x) !important;
+  padding-right: var(--page-padding-x) !important;
+}
+
+/* Fix div-block-38, div-block-39, div-block-40 (usability images) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-38,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-39,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-40 {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-10,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-11,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-12 {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Fix final designs section */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-45 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix final_design items */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .final_design {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-46 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-13 {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Fix design concept image */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-45 + div img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Fix reflection section */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-62 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: var(--page-padding-x) !important;
+  padding-right: var(--page-padding-x) !important;
+}
+
+/* Fix text-block-34 (section titles) alignment */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .text-block-34 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix text-block-17 (body text) alignment */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .text-block-17 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix text (paragraph) alignment */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .text {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix sub-text-grey alignment */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .sub-text-grey {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Ensure all headings align */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] h1,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] h2,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] h3,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] h4,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] h5,
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] h6 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix paragraph alignment */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] p {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix list alignment */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .list {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 1.5em !important;
+  padding-right: 0 !important;
+}
+
+/* Fix div-block-47 (list container) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-47 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: left !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 991px) {
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-15 {
+    flex-direction: column !important;
+    gap: var(--stack-gap-lg) !important;
+  }
+  
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-48,
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-49 {
+    width: 100% !important;
+  }
+  
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-16,
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-17 {
+    flex-direction: column !important;
+  }
+  
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .final_design {
+    flex-direction: column !important;
+  }
+  
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-46 {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-57 {
+    flex-direction: column !important;
+  }
+  
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-17,
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-18,
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .image-19 {
+    width: 100% !important;
+    margin-bottom: var(--stack-gap-sm) !important;
+  }
+  
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .container-4 {
+    flex-direction: column !important;
+  }
+  
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-38,
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-39,
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-40 {
+    width: 100% !important;
+    margin-bottom: var(--stack-gap-md) !important;
+  }
+}
