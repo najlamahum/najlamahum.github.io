@@ -4308,3 +4308,65 @@ body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-47 {
     margin-bottom: var(--stack-gap-md) !important;
   }
 }
+
+/* ============================================
+   ADDITIONAL FIXES FOR MENTAL HEALTH CASE STUDY
+   ============================================ */
+
+/* 1. Add 10px padding above title (after hero image) */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-54 {
+  margin-bottom: 10px !important;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-54 + section {
+  padding-top: 10px !important;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-54 + section .w-layout-blockcontainer.container {
+  padding-top: 0 !important;
+}
+
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-54 + section .div-block-6 {
+  padding-top: 10px !important;
+  margin-top: 0 !important;
+}
+
+/* 2. Center sidebar vertically */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-3 {
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+  right: 0 !important;
+  left: auto !important;
+}
+
+/* 3. Stack usability testing images vertically on small devices */
+body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-57 {
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: var(--stack-gap-sm) !important;
+}
+
+@media screen and (max-width: 991px) {
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-57 {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: var(--stack-gap-md) !important;
+  }
+  
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-57 > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
+    margin-bottom: 0 !important;
+  }
+  
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-57 .image-17,
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-57 .image-18,
+  body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-57 .image-19 {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+}
