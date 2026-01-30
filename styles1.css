@@ -3285,10 +3285,12 @@ textarea.w-input, textarea.w-select {
 }
 
 .div-block-53 {
-  flex-flow: row;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  align-items: stretch !important;
   margin-left: 25%;
   margin-right: 25%;
-  display: flex;
 }
 
 .footer-dark {
@@ -4331,13 +4333,17 @@ body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-54 + section .div-block
   margin-top: 0 !important;
 }
 
-/* 2. Center sidebar vertically */
+/* 2. Center sidebar vertically - override the inset property completely */
 body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-3 {
+  position: fixed !important;
   top: 50% !important;
-  bottom: auto !important;
-  transform: translateY(-50%) !important;
   right: 0 !important;
+  bottom: auto !important;
   left: auto !important;
+  transform: translateY(-50%) !important;
+  z-index: 999 !important;
+  /* Override inset shorthand */
+  inset: unset !important;
 }
 
 /* 3. Stack usability testing images vertically on small devices */
