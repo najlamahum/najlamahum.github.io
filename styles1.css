@@ -2218,7 +2218,7 @@ textarea.w-input, textarea.w-select {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
-  padding-top: 25px;
+  margin-top: 25px;
   padding-bottom: 0;
   display: flex;
 }
@@ -2285,7 +2285,7 @@ textarea.w-input, textarea.w-select {
 .sub-text-grey {
   color: #a09999;
   margin-top: 0;
-  padding-top: 10px;
+  padding-top: 15px;
   font-family: Inter, sans-serif;
 }
 
@@ -2319,7 +2319,7 @@ textarea.w-input, textarea.w-select {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
-  padding-bottom: 25px;
+  padding-bottom: 0px;
   font-family: Inter, sans-serif;
   font-size: 16px;
   line-height: 24px;
