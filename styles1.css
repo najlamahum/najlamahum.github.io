@@ -2162,7 +2162,6 @@ textarea.w-input, textarea.w-select {
   text-align: right;
   background-color: #96969600;
   flex-flow: column;
-  justify-content: center;
   align-items: center;
   width: 200px;
   display: flex;
@@ -2196,17 +2195,18 @@ textarea.w-input, textarea.w-select {
   min-height: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-family: Inter, sans-serif;
   font-size: 48px;
 }
 
 .sub_title_grey {
   color: #a09999;
-  padding-top: 25px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-family: Inter, sans-serif;
+  font-style: italic;
   font-size: 32px;
   line-height: 40px;
 }
@@ -2217,7 +2217,7 @@ textarea.w-input, textarea.w-select {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
-  padding-top: 25px;
+  margin-top: 25px;
   padding-bottom: 0;
   display: flex;
 }
@@ -2228,8 +2228,8 @@ textarea.w-input, textarea.w-select {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
-  margin-top: -12px;
-  margin-bottom: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   padding-top: 0;
   padding-bottom: 0;
   display: block;
@@ -2284,7 +2284,7 @@ textarea.w-input, textarea.w-select {
 .sub-text-grey {
   color: #a09999;
   margin-top: 0;
-  padding-top: 10px;
+  padding-top: 15px;
   font-family: Inter, sans-serif;
 }
 
@@ -2317,8 +2317,8 @@ textarea.w-input, textarea.w-select {
   color: #666;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-family: Inter, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -2427,7 +2427,7 @@ textarea.w-input, textarea.w-select {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .text-block-17.high_fidelity {
@@ -2568,10 +2568,10 @@ textarea.w-input, textarea.w-select {
 
 .text-block-34 {
   color: #3f3f3f;
-  margin-top: 0;
+  margin-left: 0;
   margin-bottom: 0;
   padding-top: 20px;
-  padding-bottom: 0;
+  padding-bottom: 20px;
   font-family: Inter, sans-serif;
   font-size: 22px;
 }
@@ -2598,6 +2598,20 @@ textarea.w-input, textarea.w-select {
 .text-block-34.lofi_title {
   padding-bottom: 20px;
 }
+#reflection {
+  text-align: left !important;
+}
+
+#reflection + .div-block-62 {
+  text-align: left !important;
+  align-items: flex-start !important; /* only matters if it's flex */
+}
+
+#reflection + .div-block-62 .text-block-34 {
+  width: 100% !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
 
 .div-block-23 {
   box-sizing: border-box;
@@ -2610,7 +2624,7 @@ textarea.w-input, textarea.w-select {
 
 .section {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
 }
 
 .div-block-24 {
@@ -3480,7 +3494,7 @@ textarea.w-input, textarea.w-select {
   grid-row-gap: 10px;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 20px;
   display: flex;
 }
@@ -3506,7 +3520,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .div-block-62 {
-  padding-top: 20px;
+  padding-top: 0px;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -4374,5 +4388,83 @@ body[data-wf-page="68e6a7a07b2c415d20bbc104"] .div-block-57 {
     max-width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
+  }
+  /* Zigzag layout for final designs */
+.final_design {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+/* Default: Image on left, text on right */
+.final_design .div-block-46 {
+  flex: 0 0 auto;
+  order: 1;
+}
+
+.final_design .div-block-47 {
+  flex: 1;
+  order: 2;
+}
+
+/* Second design: Flip it! Image on right, text on left */
+.final_design:nth-child(2) .div-block-46 {
+  order: 2;
+}
+
+.final_design:nth-child(2) .div-block-47 {
+  order: 1;
+}
+
+/* Responsive: Stack vertically on mobile */
+@media (max-width: 991px) {
+  .final_design {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .final_design .div-block-46,
+  .final_design .div-block-47 {
+    order: unset !important;
+  }
+css/* Flipped layout - image on right, text on left */
+.final_design.flipped {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Right-align the text in flipped version */
+.final_design.flipped .div-block-47 {
+  text-align: right;
+}
+
+.final_design.flipped .list {
+  list-style-position: inside;
+  text-align: right;
+}
+
+/* Regular layout */
+.final_design {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.div-block-46, .div-block-47 {
+  flex: 1;
+}
+
+@media (max-width: 991px) {
+  .final_design, .final_design.flipped {
+    flex-direction: column;
+  }
+  .final_design.flipped .div-block-47,
+  .final_design.flipped .list {
+    text-align: left;
   }
 }
