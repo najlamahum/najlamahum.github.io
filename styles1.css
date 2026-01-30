@@ -2624,7 +2624,7 @@ textarea.w-input, textarea.w-select {
 
 .section {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 0px;
 }
 
 .div-block-24 {
