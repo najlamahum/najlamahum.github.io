@@ -2196,17 +2196,18 @@ textarea.w-input, textarea.w-select {
   min-height: 0;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-family: Inter, sans-serif;
   font-size: 48px;
 }
 
 .sub_title_grey {
   color: #a09999;
-  padding-top: 25px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-family: Inter, sans-serif;
+  font-style: italic;
   font-size: 32px;
   line-height: 40px;
 }
@@ -2228,8 +2229,8 @@ textarea.w-input, textarea.w-select {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
-  margin-top: -12px;
-  margin-bottom: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   padding-top: 0;
   padding-bottom: 0;
   display: block;
