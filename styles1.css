@@ -2162,7 +2162,6 @@ textarea.w-input, textarea.w-select {
   text-align: right;
   background-color: #96969600;
   flex-flow: column;
-  justify-content: center;
   align-items: center;
   width: 200px;
   display: flex;
