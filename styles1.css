@@ -2318,8 +2318,8 @@ textarea.w-input, textarea.w-select {
   color: #666;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-family: Inter, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -2428,7 +2428,7 @@ textarea.w-input, textarea.w-select {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .text-block-17.high_fidelity {
@@ -2572,7 +2572,7 @@ textarea.w-input, textarea.w-select {
   margin-left: 0;
   margin-bottom: 0;
   padding-top: 20px;
-  padding-bottom: 0;
+  padding-bottom: 20px;
   font-family: Inter, sans-serif;
   font-size: 22px;
 }
@@ -3493,7 +3493,7 @@ textarea.w-input, textarea.w-select {
   grid-row-gap: 10px;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 20px;
   display: flex;
 }
