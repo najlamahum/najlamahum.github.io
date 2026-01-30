@@ -2217,7 +2217,7 @@ textarea.w-input, textarea.w-select {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
-  margin-top: 25px;
+  margin-top: 30px;
   padding-bottom: 0;
   display: flex;
 }
